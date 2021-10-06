@@ -4,7 +4,7 @@ RUN apt-get update
 
 RUN apt-get install default-jdk -y
 
-RUN apk add --no-cache curl tar bash procps
+RUN apt add --no-cache curl tar bash procps
 
 # Downloading and installing Maven
 # 1- Define a constant with the version of maven you want to install
