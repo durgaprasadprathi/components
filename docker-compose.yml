@@ -1,0 +1,15 @@
+version: '3'
+services:
+    maven:
+        container_name: maven-container
+        build:
+            context: .
+            dockerfile: Dockerfile
+
+    tomcat:
+        container_name: tomcat-container
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+           - "6060:8080"
