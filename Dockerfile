@@ -28,6 +28,8 @@ RUN export WORKING_DIR="/home/execution-module/"
 
 RUN export TERRAFORM_POSTGRES_CONN_STR="postgres://exec_module1:exec_module1010@128.199.17.156/exec_module?sslmode=disable"
 
+RUN mvn clean install
+
 FROM tomcat:latest
 
 ADD ./target/execution-module-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
